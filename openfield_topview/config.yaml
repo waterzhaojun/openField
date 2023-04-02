@@ -1,0 +1,58 @@
+    # Project definitions (do not edit)
+Task: open field
+scorer: Jun
+date: Apr21
+multianimalproject:
+
+    # Project path (change when moving around)
+project_path: openfield_topview
+
+    # Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  data/1.mov:
+    crop: 0, 640, 0, 426
+bodyparts:
+- head
+- body
+- bottom
+- tail
+start: 0
+stop: 1
+numframes2pick: 20
+
+    # Plotting configuration
+skeleton:
+- - head
+  - body
+- - bottom
+  - tail
+skeleton_color: black
+pcutoff: 0.1
+dotsize: 12
+alphavalue: 0.7
+colormap: jet
+
+    # Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 0
+default_net_type: resnet_50
+default_augmenter: default
+snapshotindex: -1
+batch_size: 8
+
+    # Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+croppedtraining:
+    #if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+    # Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true
+resnet:

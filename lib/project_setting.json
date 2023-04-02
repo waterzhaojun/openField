@@ -1,0 +1,6 @@
+{
+    "fps": 10,
+    "corner_coordinates": [["corner1_y", "corner1_x"], ["corner2_y", "corner2_x"], ["corner3_y", "corner3_x"], ["corner4_y", "corner4_x"]],
+    "cage_side_length": 0.44,
+    "timecourse_length": 900
+}
